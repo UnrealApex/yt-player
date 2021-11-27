@@ -340,9 +340,9 @@ function previousVideo() {
 }
 
 // focuses input for queue when user opens details
-document.querySelector("details").addEventListener("toggle", function() {
-  document.querySelector("#queue-input").focus();
-});
+// document.querySelector("details").addEventListener("toggle", function() {
+//   document.querySelector("#queue-input").focus();
+// });
 
 // keyboard shortcuts
 document.addEventListener("keydown", function(event) {
@@ -371,7 +371,6 @@ document.addEventListener("keydown", function(event) {
 document.querySelector("form").addEventListener("click", function() {
   if (document.querySelector("#queue-radio").checked) {
     document.querySelector("#queue").classList.remove("hidden");
-    document.querySelector("details").open = true;
     document.querySelector("#queue-input").focus();
     document.querySelector("#queue-count").classList.remove("hidden");
     document.querySelector("#next-video").classList.remove("hidden");
@@ -380,7 +379,6 @@ document.querySelector("form").addEventListener("click", function() {
     document.querySelector("#previous-video").disabled = false;
   } else if (document.querySelector("#url-radio").checked) {
     document.querySelector("#queue").classList.add("hidden");
-    document.querySelector("details").open = false;
     document.querySelector("#url-input").focus();
     document.querySelector("#queue-count").classList.add("hidden");
     document.querySelector("#next-video").classList.add("hidden");
