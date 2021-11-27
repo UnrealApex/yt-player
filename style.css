@@ -218,6 +218,10 @@ button {
 }
 
 #queue {
+  padding: 0.5rem;
+  border: 2px solid #1a1a1a;
+  border-radius: 0.2rem;
+  background-color: #eaeaea;
   float: right;
   position: relative;
 }
@@ -242,7 +246,7 @@ details[open] summary {
   margin-bottom: 0.5em;
 }
 
-.queue {
+/* .queue {
   animation-name: rgb-bg;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -252,7 +256,7 @@ details[open] summary {
   padding: 10px 20px;
   color: white;
   text-align: center;
-}
+} */
 
 #queue-buttons {
   float: left;
@@ -283,4 +287,13 @@ details,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+#queue-list {
+  margin-top: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: white;
+  width: 100%;
+  height: 5rem;
+  overflow: scroll;
 }
