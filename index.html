@@ -128,8 +128,13 @@
           </button>
         </div>
         <progress id="loader" title="loading video..."></progress>
-        <iframe id="videoPlayer" loading="eager" allowfullscreen="true">
-          <p>Your browser does not support iframes.</p>
+        <iframe 
+          id="videoPlayer" 
+          loading="eager" 
+          allowfullscreen="true" 
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+            <p>Your browser does not support iframes.</p>
         </iframe>
       </div>
     </div>
