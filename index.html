@@ -182,18 +182,18 @@ delete
       <div id="overlay-content">
         <div>
           <button
-            class="overlay-buttons material-icons-round"
+            class="overlay-buttons window-buttons material-icons-round"
             title="close"
             onclick="closeOverlay()"
             >close</button>
           <button
-            class="overlay-buttons material-icons-round"
+            class="overlay-buttons window-buttons material-icons-round"
             title="maximize"
             onclick="openFullscreen()"
           >
             check_box_outline_blank</button>
           <button
-            class="overlay-buttons material-icons-round"
+            class="overlay-buttons window-buttons material-icons-round"
             title="minimize"
             onclick="minimizeOverlay()"
             >minimize</button>
@@ -207,6 +207,11 @@ delete
             >
               skip_next
             </button>
+
+      <span id="queue-number-changer" class="">
+        <input type="number" id="video-number" value="0" min="0" title="Enter a number between 1 and -"><div id="queue-count">/-</div>
+      </span>
+
             <button
               class="overlay-buttons material-icons-round"
               id="previous-video"
@@ -217,7 +222,6 @@ delete
               skip_previous
             </button>
           </div>
-          <div id="queue-count" class="hidden">queue: 0/0</div>
         </div>
         <!-- TODO: make this responsive -->
         <iframe

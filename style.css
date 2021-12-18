@@ -228,13 +228,17 @@ button:not(#play, .overlay-buttons) {
   color: white !important;
   transition-duration: 0.5s;
   padding: 0.25em;
-  float: right;
   cursor: pointer;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   overflow: hidden;
   outline: none;
+}
+
+
+.window-buttons {
+  float: right;
 }
 
 .overlay-buttons:hover {
@@ -512,4 +516,21 @@ img {
   position: absolute;
   bottom: 8px;
   right: 16px;
+}
+
+#video-number {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 0.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  float: left;
+}
+
+#video-number-container {
+  flex: 1;
+}
+
+#video-number-child {
+  justify-content: flex-start;
 }

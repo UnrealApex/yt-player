@@ -275,9 +275,7 @@ function addQueue() {
     // document.querySelector("#queue-list").appendChild(linebreak);
     // document.querySelector("#queue-list").innerHTML +=
     //   queue.length + ". " + queueValue;
-    document.querySelector("#queue-count").innerHTML = `queue: ${
-      queueNumber + 1
-    } / ${queue.length}`;
+    // document.querySelector("#queue-count").innerHTML = `queue: ${queueNumber + 1} / ${queue.length}`;
     document.querySelector(
       "#queue-counter-ui"
     ).innerHTML = `queue(${queue.length})`;
@@ -315,7 +313,7 @@ function deleteQueue() {
     if (confirmDelete) {
       queue = [];
       document.querySelector("#queue-list").innerHTML = "";
-      document.querySelector("#queue-count").innerHTML = "queue: 0/0";
+      // document.querySelector("#queue-count").innerHTML = "queue: 0/0";
       document.querySelector("#queue-input").value = "";
       document.querySelector("#queue-input").focus();
       document.querySelector("#queue-counter-ui").innerHTML = "queue";
@@ -361,9 +359,7 @@ function nextVideo() {
     ).title = document
       .querySelector("#thumbnail-" + queueNumber)
       .title.replace(/^/, "current video" + "\n");
-    document.querySelector("#queue-count").innerHTML = `queue: ${
-      queueNumber + 1
-    } / ${queue.length}`;
+    // document.querySelector("#queue-count").innerHTML = `queue: ${queueNumber + 1} / ${queue.length}`;
     return queueNumber;
   } else {
     alert("You are at the end of the queue");
@@ -392,9 +388,7 @@ function previousVideo() {
     ).title = document
       .querySelector("#thumbnail-" + queueNumber)
       .title.replace(/^/, "current video" + "\n");
-    document.querySelector("#queue-count").innerHTML = `queue: ${
-      queueNumber + 1
-    } / ${queue.length}`;
+    // document.querySelector("#queue-count").innerHTML = `queue: ${queueNumber + 1} / ${queue.length}`;
     return queueNumber;
   } else {
     alert("You are at the start of the queue");
@@ -469,7 +463,7 @@ document.querySelector("form").addEventListener("click", function () {
     // document.querySelector("#queue").classList.remove("hidden");
     // document.querySelector("details").open = true;
     document.querySelector("#queue-input").focus();
-    document.querySelector("#queue-count").classList.remove("hidden");
+    document.querySelector("#queue-number-changer").classList.remove("hidden");
     document.querySelector("#next-video").classList.remove("hidden");
     document.querySelector("#previous-video").classList.remove("hidden");
     document.querySelector("#queue-button").disabled = false;
@@ -479,7 +473,7 @@ document.querySelector("form").addEventListener("click", function () {
     // document.querySelector("#queue").classList.add("hidden");
     // document.querySelector("details").open = false;
     document.querySelector("#url-input").focus();
-    document.querySelector("#queue-count").classList.add("hidden");
+    document.querySelector("#queue-number-changer").classList.add("hidden");
     document.querySelector("#next-video").classList.add("hidden");
     document.querySelector("#previous-video").classList.add("hidden");
     document.querySelector("#queue-button").disabled = true;
@@ -494,7 +488,7 @@ document.querySelector("form").addEventListener("click", function () {
     document.querySelector("#queue-button").disabled = false;
     document.querySelector("#queue-div").classList.remove("hidden");
     document.querySelector("#queue-input").focus();
-    document.querySelector("#queue-count").classList.remove("hidden");
+    document.querySelector("#queue-number-changer").classList.remove("hidden");
     // document.querySelector("#next-video").classList.remove("hidden");
     // document.querySelector("#previous-video").classList.remove("hidden");
     document.querySelector("#next-video").disabled = false;
@@ -503,7 +497,7 @@ document.querySelector("form").addEventListener("click", function () {
     document.querySelector("#queue-button").disabled = true;
     document.querySelector("#queue-div").classList.add("hidden");
     document.querySelector("#url-input").focus();
-    document.querySelector("#queue-count").classList.add("hidden");
+    document.querySelector("#queue-number-changer").classList.add("hidden");
     // document.querySelector("#next-video").classList.add("hidden");
     // document.querySelector("#previous-video").classList.add("hidden");
     document.querySelector("#next-video").disabled = true;
