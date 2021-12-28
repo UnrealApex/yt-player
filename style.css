@@ -370,7 +370,7 @@ details,
   right: 0;
   position: fixed;
   margin: 2rem;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
 }
 
@@ -465,10 +465,10 @@ img {
 }
 
 #queue-wrapper {
-  bottom: 10px;
+  bottom: 7.5px;
   right: 10px;
-  margin: 0.5rem 0 0 0.5rem;
-  /* position: fixed; */
+  position: absolute;
+  /* margin: 0.5rem 0 0 0.5rem; */
   z-index: auto;
 }
 
@@ -606,15 +606,15 @@ ul {
     /* margin: 5rem 0 0 7rem;  */
     /* float: right; */
     position: relative;
-    bottom: 0;
-    right: 0;
+    /* bottom: 0;
+    right: 0; */
 }
 
 
 .iframe-bar {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 0px;
+    right: 0px;
     width: 100%;
     /* height: 40px; */
 }
