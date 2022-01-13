@@ -397,6 +397,11 @@ details,
   background-color: lightgray;
 }
 
+.thumbnail:hover {
+  transition-delay: 0.5s;
+  transform: scale(2);
+}
+
 .thumbnail-number {
   font-size: 1rem;
   color: white;
