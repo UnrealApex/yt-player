@@ -406,3 +406,21 @@ img {
 #private-mode {
   transition: background-color 1s ease;
 }
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: blue;
+}
+
+#context-menu {
+  border: 3px solid cyan;
+  position: absolute;
+  z-index: 9998;
+}

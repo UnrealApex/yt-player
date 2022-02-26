@@ -26,6 +26,7 @@ const thumbnail = document.querySelector("#thumbnail");
 const optionsDiv = document.querySelector("#options-div");
 // button that toggles private mode
 const privateModeButton = document.querySelector("#private-mode");
+const contextMenu = document.querySelector("#context-menu");
 // checks if the video is loaded or not
 var isLoaded = () =>
   iframe.readyState == "complete" || "interactive" ? true : false;
@@ -410,5 +411,18 @@ optionsDiv.addEventListener("click", (event) => {
       break;
     default:
       console.error("error: unknown button clicked in options dropdown");
+  }
+});
+
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  contextMenu.classList.remove("hidden");
+  contextMenu.style.left = e.pageX + "px";
+  contextMenu.style.top = e.pageY + "px";
+});
+
+document.addEventListener("click", (e) => {
+  if ((e.target.id !== "context-menu" && !(contextMenu.classList.contains("hidden")) || (e.target.id === "context-menu"))) {
+    contextMenu.classList.add("hidden");
   }
 });
