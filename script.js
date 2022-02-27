@@ -414,11 +414,41 @@ optionsDiv.addEventListener("click", (event) => {
   }
 });
 
+
+// FIXME: fix issue with context menu positioning on bottom
 document.addEventListener("contextmenu", (e) => {
   e.preventDefault();
   contextMenu.classList.remove("hidden");
-  contextMenu.style.left = e.pageX + "px";
-  contextMenu.style.top = e.pageY + "px";
+  // check if a part of the context menu will overflow off the document
+  let offDocumentX = e.pageX >= screen.width - 100 ? true : false; 
+  let offDocumentY = e.pageY >= screen.length - 100? true : false; 
+  if (offDocumentX && offDocumentY) {
+    // alert("x and y are off the document")
+    contextMenu.style.left = `${screen.width - 250}px`;
+    contextMenu.style.top = `${screen.height - 250}px`;
+  } else if (offDocumentX) { 
+    // alert("x is off the document")
+    contextMenu.style.left = `${screen.width - 250}px`;
+    contextMenu.style.top = e.pageY + "px";
+  } else if (offDocumentY) {
+    // alert("y is off the document")
+    contextMenu.style.left = e.pageX + "px";
+    contextMenu.style.top = `${screen.height - 250}px`;
+  } else {
+    // alert("x and y are in the document")
+    contextMenu.style.left = e.pageX + "px";
+    contextMenu.style.top = e.pageY + "px";
+  }
+
+
+    // contextMenu.style.left = e.pageX + "px";
+    // contextMenu.style.top = e.pageY + "px";
+
+  var rect = contextMenu.getBoundingClientRect();
+  // alert(rect.top, rect.right, rect.bottom, rect.left);
+  // alert(rect.top)
+  // alert("cursor x is at: " + e.pageX);
+  // alert("offdocuement =: " + offDocumentX)
 });
 
 document.addEventListener("click", (e) => {
