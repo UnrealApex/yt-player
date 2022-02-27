@@ -408,10 +408,12 @@ img {
 }
 
 ul {
-  list-style-type: none;
+  padding: 0;
+  list-style: none;
 }
 
 li {
+  padding: 0.4rem;
   cursor: pointer;
 }
 
@@ -423,4 +425,7 @@ li:hover {
   border: 3px solid cyan;
   position: absolute;
   z-index: 9998;
+  width: 15rem;
+  /* min-width: 4rem;
+  min-height: 8rem; */
 }
