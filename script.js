@@ -421,7 +421,7 @@ document.addEventListener("contextmenu", (e) => {
   contextMenu.classList.remove("hidden");
   // check if a part of the context menu will overflow off the document
   let offDocumentX = e.pageX >= screen.width - 100 ? true : false; 
-  let offDocumentY = e.pageY >= screen.length - 100? true : false; 
+  let offDocumentY = e.pageY >= screen.length - 100 ? true : false; 
   if (offDocumentX && offDocumentY) {
     // alert("x and y are off the document")
     contextMenu.style.left = `${screen.width - 250}px`;
@@ -444,11 +444,8 @@ document.addEventListener("contextmenu", (e) => {
     // contextMenu.style.left = e.pageX + "px";
     // contextMenu.style.top = e.pageY + "px";
 
-  var rect = contextMenu.getBoundingClientRect();
-  // alert(rect.top, rect.right, rect.bottom, rect.left);
-  // alert(rect.top)
-  // alert("cursor x is at: " + e.pageX);
-  // alert("offdocuement =: " + offDocumentX)
+  // alert("cursor y is at: " + e.pageY);
+  // alert("offdocuementy =: " + offDocumentY)
 });
 
 document.addEventListener("click", (e) => {
