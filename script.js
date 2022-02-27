@@ -421,7 +421,7 @@ document.addEventListener("contextmenu", (e) => {
   contextMenu.classList.remove("hidden");
   // check if a part of the context menu will overflow off the document
   let offDocumentX = e.pageX >= screen.width - 100 ? true : false; 
-  let offDocumentY = e.pageY >= screen.length - 100 ? true : false; 
+  let offDocumentY = e.pageY >= screen.height - 100 ? true : false; 
   if (offDocumentX && offDocumentY) {
     // alert("x and y are off the document")
     contextMenu.style.left = `${screen.width - 250}px`;
