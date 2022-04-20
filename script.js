@@ -101,6 +101,7 @@ $(function () {
       $iframe.attr("src").includes(videoId)
     ) {
       $expandBox.hide();
+      $playButton.blur();
       $overlay.show();
       // $overlay.css("display", "block");
     } else {
@@ -112,6 +113,7 @@ $(function () {
   // loads the youtube video into the player iframe
   // take parameter videoId(string)
   function loadVideo(videoId) {
+    $playButton.blur();
     $overlay.show();
     $expandBox.hide();
     $loader.show();
