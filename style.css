@@ -7,6 +7,7 @@
   justify-content: space-between;
   line-height: 1.6rem;
   border-radius: 0.2rem;
+   --primary: #00acc1 !important;
 }
 
 h1 {
@@ -36,11 +37,12 @@ kbd {
 
 #input-field {
   width: 100%;
-  border: none;
+/*   border: none; */
   font: inherit;
   padding: 0.4rem 2rem;
   margin-right: 0.4rem;
-  border-color: black;
+/*   border-color: black !important; */
+/*   border: 3px solid gray !important; */
   border-radius: 0.2rem;
 }
 
@@ -93,7 +95,13 @@ legend,
   margin-top: 1rem;
   padding: 1.4rem 1rem;
   border-radius: 0.4rem;
-  background: #eaeaea;
+/*   background: #eaeaea; */
+  width: 50rem !important;
+}
+
+#play {
+  color: white;
+  width: 6rem !important;
 }
 
 .fade {
@@ -202,7 +210,7 @@ fieldset {
   border-radius: 0.2rem;
 }
 
-button {
+button:not(#play) {
   border: none;
   font: inherit;
   padding: 0.4rem 1rem;
@@ -264,16 +272,10 @@ button {
 }
 
 .container {
-  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: auto;
-}
-
-.child {
-  /* Center vertically */
-  position: absolute;
-  top: 50%;
 }
 
 #expand-box {
