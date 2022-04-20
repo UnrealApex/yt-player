@@ -234,6 +234,7 @@ fieldset {
   transition-duration: 0.5s;
   padding: 0.25em;
   float: right;
+  margin-bottom: 0.25rem !important;
 }
 
 .overlay-buttons:hover,
