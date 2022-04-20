@@ -65,24 +65,24 @@
                 autofocus
                 required
                 placeholder="enter youtube video url"
-                title="enter a youtube video url"
+                data-tooltip="enter a youtube video url"
                 size="22"
                 minlength="20"
                 maxlength="80"
               />
-              <button role="button" id="play" title="play video url" disabled>play</button>
+              <button role="button" id="play" data-tooltip="play video url" disabled>play</button>
             </div>
           </form>
           <!-- <fieldset>
             <legend>options</legend>
             <div>
-              <div title="load video in full screen">
+              <div data-tooltip="load video in full screen">
                 <label
                   ><input type="checkbox" name="" id="load-fullscreen" />load in
                   full screen</label
                 >
               </div>
-              <div title="load video in private mode">
+              <div data-tooltip="load video in private mode">
                 <label
                   ><input type="checkbox" name="" id="private-mode" />private
                   mode</label
@@ -101,25 +101,25 @@
         <div>
           <button
             class="overlay-buttons transparent-button material-icons-round"
-            title="close"
+            data-tooltip="close"
           >
             close
           </button>
           <button
             class="overlay-buttons transparent-button material-icons-round"
-            title="maximize"
+            data-tooltip="maximize"
           >
             check_box_outline_blank
           </button>
           <button
             class="overlay-buttons transparent-button material-icons-round"
-            title="minimize"
+            data-tooltip="minimize"
           >
             minimize
           </button>
         </div>
 
-        <progress id="loader" title="loading video..."></progress>
+        <progress id="loader" data-tooltip="loading video..."></progress>
         <iframe id="videoPlayer" loading="eager" allowfullscreen="true">
           <p>Your browser does not support iframes.</p>
         </iframe>
@@ -135,7 +135,7 @@
         <div id="options-dropdown">
           <div id="reload" class="options">reload video</div>
 
-          <!-- <div class="options" title="load video in private mode">
+          <!-- <div class="options" data-tooltip="load video in private mode">
                 <label
                   ><input type="checkbox" name="" id="private-mode" />private
                   mode</label
@@ -145,7 +145,7 @@
             id="private-mode"
             class="options"
             data-enabled="false"
-            title="private mode is currently disabled(click to enable)"
+            data-tooltip="private mode is currently disabled(click to enable)"
           >
             private mode
           </div>
@@ -155,7 +155,7 @@
       </div>
     </div>
     <div id="expand-box" class="hidden">
-      <img id="thumbnail" title="click to reopen minimized video" />
+      <img id="thumbnail" data-tooltip="click to reopen minimized video" />
       <div id="expand-hint-text">minimized video</div>
     </div>
     <div id="shortcuts-modal" class="modal">
