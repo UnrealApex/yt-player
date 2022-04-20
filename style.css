@@ -210,7 +210,7 @@ fieldset {
   border-radius: 0.2rem;
 }
 
-button:not(#play) {
+/* button:not(#play, .overlay-buttons) {
   border: none;
   font: inherit;
   padding: 0.4rem 1rem;
@@ -220,7 +220,8 @@ button:not(#play) {
   background: #d4d4d4;
   color: black;
 }
-
+ */
+ 
 .valid {
   border-width: 2px;
   border-style: solid;
@@ -229,6 +230,7 @@ button:not(#play) {
 
 .overlay-buttons {
   color: white;
+  width: 2rem !important;
   transition-duration: 0.5s;
   padding: 0.25em;
   float: right;
