@@ -46,6 +46,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.4.1/css/pico.min.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/balloon-css@1.2.0/balloon.min.css">
   </head>
 
   <body>
@@ -65,24 +66,25 @@
                 autofocus
                 required
                 placeholder="enter youtube video url"
-                data-tooltip="enter a youtube video url"
+                aria-label="enter a youtube video url"
+                data-balloon-pos="up"
                 size="22"
                 minlength="20"
                 maxlength="80"
               />
-              <button role="button" id="play" data-tooltip="play video url" disabled>play</button>
+              <button role="button" id="play" aria-label="play video url" data-balloon-pos="up" disabled>play</button>
             </div>
           </form>
           <!-- <fieldset>
             <legend>options</legend>
             <div>
-              <div data-tooltip="load video in full screen">
+              <div aria-label="load video in full screen">
                 <label
                   ><input type="checkbox" name="" id="load-fullscreen" />load in
                   full screen</label
                 >
               </div>
-              <div data-tooltip="load video in private mode">
+              <div aria-label="load video in private mode">
                 <label
                   ><input type="checkbox" name="" id="private-mode" />private
                   mode</label
@@ -101,25 +103,28 @@
         <div>
           <button
             class="overlay-buttons transparent-button material-icons-round"
-            data-tooltip="close"
+            aria-label="close"
+            data-balloon-pos="up"
           >
             close
           </button>
           <button
             class="overlay-buttons transparent-button material-icons-round"
-            data-tooltip="maximize"
+            aria-label="maximize"
+            data-balloon-pos="up"
           >
             check_box_outline_blank
           </button>
           <button
             class="overlay-buttons transparent-button material-icons-round"
-            data-tooltip="minimize"
+            aria-label="minimize"
+            data-balloon-pos="up"
           >
             minimize
           </button>
         </div>
 
-        <progress id="loader" data-tooltip="loading video..."></progress>
+        <progress id="loader" aria-label="loading video..." data-balloon-pos="up"></progress>
         <iframe id="videoPlayer" loading="eager" allowfullscreen="true">
           <p>Your browser does not support iframes.</p>
         </iframe>
@@ -135,7 +140,8 @@
         <div id="options-dropdown">
           <div id="reload" class="options">reload video</div>
 
-          <!-- <div class="options" data-tooltip="load video in private mode">
+          <!-- <div class="options" aria-label="load video in private mode">
+            data-balloon-pos="up"
                 <label
                   ><input type="checkbox" name="" id="private-mode" />private
                   mode</label
@@ -145,7 +151,8 @@
             id="private-mode"
             class="options"
             data-enabled="false"
-            data-tooltip="private mode is currently disabled(click to enable)"
+            aria-label="private mode is currently disabled(click to enable)"
+            data-balloon-pos="up"
           >
             private mode
           </div>
@@ -155,7 +162,8 @@
       </div>
     </div>
     <div id="expand-box" class="hidden">
-      <img id="thumbnail" data-tooltip="click to reopen minimized video" />
+      <img id="thumbnail" aria-label="click to reopen minimized video" />
+    data-balloon-pos="up"
       <div id="expand-hint-text">minimized video</div>
     </div>
     <div id="shortcuts-modal" class="modal">
