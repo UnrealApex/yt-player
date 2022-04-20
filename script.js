@@ -171,8 +171,7 @@ $(function () {
     url = "";
     $iframe.attr("src", "");
     // expandButton.disabled = true;
-    $inputField.removeClass();
-    $playButton.removeClass();
+    $inputField.attr("aria-invalid", "");
     $playButton.css("color", "#1a1a1a");
     $playButton.prop("disabled", true);
     $inputField.val("");
