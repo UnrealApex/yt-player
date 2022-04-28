@@ -99,8 +99,41 @@
     </div>
 
     <div id="overlay">
+
+
+    <div class="aesthetic-windows-95-modal">
+
+    <!-- Title Bar -->
+    <div class="aesthetic-windows-95-modal-title-bar">
+
+      <div class="aesthetic-windows-95-modal-title-bar-text">
+        Video Modal
+      </div>
+
+      <div class="aesthetic-windows-95-modal-title-bar-controls">
+        <div class="aesthetic-windows-95-button-title-bar">
+          <button>
+            X
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Content -->
+    <!-- Could be a tabbed container, or a set of dropdowns, etc... -->
+    <div class="aesthetic-windows-95-modal-content">
+      <iframe id="videoPlayer" loading="eager" allowfullscreen="true">
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
+  </div>
+
+
+
       <div id="overlay-content">
-        <div>
+        <!-- <div>
           <button
             class="overlay-buttons transparent-button material-icons-round"
             aria-label="close"
@@ -125,10 +158,7 @@
         </div>
 
         <progress id="loader" aria-label="loading video..." data-balloon-pos="up"></progress>
-        <iframe id="videoPlayer" loading="eager" allowfullscreen="true">
-          <p>Your browser does not support iframes.</p>
-        </iframe>
-      </div>
+      </div> -->
 
       <div id="options-div">
         <button
@@ -160,6 +190,7 @@
           <div id="open-video" class="options">open video on youtube</div>
         </div>
       </div>
+    </div>
     </div>
     <div id="expand-box" class="hidden" aria-label="click to reopen minimized video" data-balloon-pos="left">
       <img id="thumbnail"/>
