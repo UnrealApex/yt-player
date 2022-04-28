@@ -452,7 +452,7 @@ $(function () {
   });
 
   // overlay close overlay button
-  $("button:contains('close')").on("click", function () {
+  $("button:contains('X')").on("click", function () {
     closeOverlay();
   });
 
