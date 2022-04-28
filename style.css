@@ -369,10 +369,10 @@ img {
 }
 
 #options-button {
-  color: white;
-  transition-duration: 1s;
-  border: 3px solid #a56de2;
-  border-radius: 0.4rem;
+  /* color: white; */
+  /* transition-duration: 1s; */
+  /* border: 3px solid #a56de2; */
+  /* border-radius: 0.4rem; */
   padding: 0.5rem;
   float: right;
 }
